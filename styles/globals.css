@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Prata&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans',  Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Prata', Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+  @apply relative overflow-hidden;
+}
+
+.navbar {
+  z-index: 99999;
+}
+
+.link-with-hover-effect::before {
+  @apply block w-full h-full bg-blue-500 absolute left-0 transition-all;
+  content: "";
+  top: 100%;
+  z-index: -1000;
+}
+
+.link-with-hover-effect::after {
+  @apply transition-all;
+  content: "\2192";
+  display: inline-block;
+  opacity: 0%;
+  position: relative;
+  left: -10px;
+}
+
+.link-with-hover-effect:hover::after {
+  opacity: 100%;
+  left: 10px;
+}
+
+.link-with-hover-effect:hover::before {
+  top: 0;
+}
+
+.search-btn svg {
+  transform: rotate(0deg);
+}
+
+.search-btn:hover svg {
+  transform: rotate(-20deg);
+}
+
+/* carousel */
+.g-prime-custom-carousel-previous-btn, 
+.g-prime-custom-carousel-next-btn {
+  background: rgba(255,255,255, 0.5);
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+
+.g-prime-custom-carousel-previous-btn:hover, 
+.g-prime-custom-carousel-next-btn:hover,
+.g-prime-custom-carousel-previous-btn:focus, 
+.g-prime-custom-carousel-next-btn:focus {
+  outline: none;
+  border: 0;
+  opacity: 1;
+}
+
+.g-prime-custom-carousel-previous-btn {
+  left: 0;
+}
+
+.g-prime-custom-carousel-next-btn {
+  right: 0;
+}
+
+.g-prime-custom-carousel-wrapper {
+  @apply  whitespace-nowrap transition-transform;
+  display: relative;
+  z-index: 0;
+}
+
+.g-prime-custom-carousel-wrapper > * {
+  @apply  text-xl max-w-5xl w-full h-96 bg-blue-500 inline-block opacity-20 transition-all;
+  transform: scale(0.95);
+}
+
+.g-prime-custom-carousel-wrapper .slide.g-prime-custom-carousel-slide-active {
+  @apply opacity-100 mx-1 transform scale-100;
+}

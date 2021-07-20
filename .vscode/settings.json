@@ -1,0 +1,11 @@
+{
+  "css.customData": [
+    ".vscode/css_custom_data.json"
+  ],
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "off",
+  "typescript.tsc.autoDetect": "off",
+  "npm.autoDetect": "off",
+  "debug.allowBreakpointsEverywhere": true,
+  "html.autoClosingTags": false
+}

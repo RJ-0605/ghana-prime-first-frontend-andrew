@@ -1,0 +1,22 @@
+{
+  "name": "next-tailwind-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.2.4",
+    "next": "10.0.6",
+    "postcss": "^8.2.4",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-map-gl": "^6.1.8",
+    "react-swipeable": "^6.0.1",
+    "tailwindcss": "^2.0.2",
+    "tiny-slider": "^2.9.3",
+    "tiny-slider-react": "^0.5.3"
+  }
+}
